@@ -1,0 +1,10 @@
+.list{
+  width: 100%;
+  max-width: 516px;
+  margin:56px auto;
+}
+
+h4{
+  margin-bottom: 8px;
+  color: #7a7a7a;
+}
