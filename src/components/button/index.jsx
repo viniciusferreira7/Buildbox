@@ -10,7 +10,7 @@ export const Button = ({ inputRef, textareaRef }) => {
 
   return (
     <button
-      className="publish-button"
+      className="publish-btn"
       onClick={() => context.dispatch({ type: inputRef.current.value, payload: textareaRef.current.value })}
     >
       Publicar

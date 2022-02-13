@@ -10,8 +10,10 @@ function Home() {
   return (
     <HomeContext>
       <Navbar />
-      <Register />
-      <List />
+      <div className="container">
+        <Register />
+        <List />
+      </div>
     </HomeContext>
   );
 }

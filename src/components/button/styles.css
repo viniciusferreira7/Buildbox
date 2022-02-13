@@ -1,4 +1,4 @@
-.publish-button{
+.publish-btn{
   width: 98px;
   height: 41px;
   margin-left: 24px;
@@ -10,6 +10,11 @@
   transition: border-radius 2ms ease-in-out;
 }
 
-.publish-button:hover{
+.btn-active{
+  background-color: #71bb00;
+  color: #fff;
+}
+
+.publish-btn:hover{
   border: 2px solid #716f6f ;
 }
