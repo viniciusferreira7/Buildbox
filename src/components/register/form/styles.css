@@ -1,0 +1,41 @@
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width:100%;
+  max-width: 516px;
+  background-color: #313131;
+  border: solid 1px #3b3b3b;
+  padding: 24px 2%;
+  margin-top: 40px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.photo-upload{
+  width: 88px;
+  height: 88px;
+  border-radius: 36px;
+  border: solid 2px #3b3b3b;
+  cursor: pointer;
+}
+
+.group-buttons{
+  width: 100%;
+  max-width: 468px;
+  text-align: right;
+  margin-bottom: 24px;
+}
+
+@media screen and (max-width:415px){
+  form{
+    padding: 24px 4%;
+  }
+}
+
+@media screen and (max-width:281px){
+  form{
+    padding: 24px 4% 12px 4%;
+  }
+}

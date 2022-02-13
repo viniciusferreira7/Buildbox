@@ -1,8 +1,7 @@
-import { HomeContext } from '../../contexts/HomeContext';
 import { List } from '../../components/list';
-
+import { HomeContext } from '../../contexts/homeContext';
 import Navbar from '../../components/navbar';
-import Register from '../../components/register';
+import Register from '../../components/register/form';
 
 import './styles.css';
 
