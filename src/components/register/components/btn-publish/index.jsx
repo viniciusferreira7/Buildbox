@@ -7,15 +7,15 @@ import './styles.css';
 
 import './styles.css';
 
-export const Button = ({ inputRef, textareaRef, disabled }) => {
+export const Button = ({ inputRef, textareaRef, disabled, randomPhoto }) => {
   const context = useContext(Context);
-
-  console.log(disabled);
 
   return (
     <button
       className={`btn-publish ${disabled ? '' : 'btn-active'}`}
-      onClick={() => context.dispatch({ type: ['add', inputRef.current.value, textareaRef.current.value] })}
+      onClick={() =>
+        context.dispatch({ type: ['add', randomPhoto, inputRef.current.value, textareaRef.current.value] })
+      }
       disabled={disabled}
     >
       Publicar
@@ -27,4 +27,5 @@ Button.propTypes = {
   inputRef: P.object,
   textareaRef: P.object,
   disabled: P.bool,
+  randomPhoto: P.func,
 };

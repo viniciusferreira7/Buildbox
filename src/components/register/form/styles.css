@@ -13,14 +13,6 @@ form{
   transform: translateX(-50%);
 }
 
-.photo-upload{
-  width: 88px;
-  height: 88px;
-  border-radius: 36px;
-  border: solid 2px #3b3b3b;
-  cursor: pointer;
-}
-
 .group-buttons{
   width: 100%;
   max-width: 468px;

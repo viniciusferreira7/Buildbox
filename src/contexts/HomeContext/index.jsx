@@ -15,6 +15,10 @@ export const reducer = (state, action) => {
     case 'new': {
       return [...action.type[1]];
     }
+
+    case 'photo': {
+      return [...{ id: state.length + 1, name: action.type[1], message: action.type[2] }, ...state];
+    }
   }
 };
 
