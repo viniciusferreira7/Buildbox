@@ -27,5 +27,5 @@ Button.propTypes = {
   inputRef: P.object,
   textareaRef: P.object,
   disabled: P.bool,
-  randomPhoto: P.func,
+  randomPhoto: P.string,
 };

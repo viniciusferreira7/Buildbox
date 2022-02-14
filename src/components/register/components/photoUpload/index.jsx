@@ -5,8 +5,8 @@ import trash from '../../../../images/trash.png';
 
 import './styles.css';
 
-export const PhotoUpload = ({ image, setImage, randomPhoto }) => {
-  const whatImage = image ? (
+export const PhotoUpload = ({ fields, setFields, randomPhoto }) => {
+  const whatImage = fields.photo ? (
     <img className="image" src={randomPhoto} alt="photo" />
   ) : (
     <img className="notImage" src={notImage} alt="sem imagem" />
@@ -14,16 +14,18 @@ export const PhotoUpload = ({ image, setImage, randomPhoto }) => {
 
   return (
     <div className="wrapper">
-      <div onClick={() => setImage(true)} className="photo-upload">
+      <div onClick={() => setFields({ ...fields, photo: true })} className="photo-upload">
         {whatImage}
       </div>
-      {image && <img onClick={() => setImage(false)} className="trash" src={trash} alt="trash" />}
+      {fields.photo && (
+        <img onClick={() => setFields({ ...fields, photo: false })} className="trash" src={trash} alt="trash" />
+      )}
     </div>
   );
 };
 
 PhotoUpload.propTypes = {
-  image: P.bool,
-  setImage: P.func,
-  randomPhoto: P.func,
+  fields: P.object,
+  setFields: P.func,
+  randomPhoto: P.string,
 };

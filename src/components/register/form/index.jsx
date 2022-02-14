@@ -14,27 +14,24 @@ function Register() {
   const context = useContext(Context);
   console.log(context.state);
 
-  const [image, setImage] = useState(false);
-
   const inputRef = useRef();
   const textareaRef = useRef();
 
   const [fields, setFields] = useState({
     input: false,
     textarea: false,
-    photo: image,
+    photo: false,
   });
 
   console.log(fields);
-  console.log(image);
 
   const randomPhoto = photo[Math.round(Math.random() * (2 - 0) + 0)];
 
-  const disabled = fields.input == true && fields.textarea == true ? false : true;
+  const disabled = fields.input == true && fields.textarea == true && fields.photo == true ? false : true;
 
   return (
     <form onSubmit={(e) => e.preventDefault()}>
-      <PhotoUpload image={image} setImage={setImage} randomPhoto={randomPhoto} fields={fields} setFields={setFields} />
+      <PhotoUpload randomPhoto={randomPhoto} fields={fields} setFields={setFields} />
       <Input inputRef={inputRef} fields={fields} setFields={setFields} />
       <Textarea textareaRef={textareaRef} fields={fields} setFields={setFields} />
 
