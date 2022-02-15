@@ -1,6 +1,6 @@
 import { List } from '../../components/list';
 import { HomeContext } from '../../contexts/homeContext';
-import Navbar from '../../components/navbar';
+import Header from '../../components/header';
 import Register from '../../components/register/form';
 
 import './styles.css';
@@ -8,7 +8,7 @@ import './styles.css';
 function Home() {
   return (
     <HomeContext>
-      <Navbar />
+      <Header />
       <div className="container">
         <Register />
         <List />

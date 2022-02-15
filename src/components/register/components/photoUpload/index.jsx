@@ -5,9 +5,14 @@ import trash from '../../../../images/trash.png';
 
 import './styles.css';
 
-export const PhotoUpload = ({ fields, setFields, randomPhoto }) => {
+export const PhotoUpload = ({ setCounter, fields, setFields, nextPhoto }) => {
+  const handleCounter = () => {
+    setFields({ ...fields, photo: false });
+    setCounter((prevCounter) => prevCounter + 1);
+  };
+
   const whatImage = fields.photo ? (
-    <img className="image" src={randomPhoto} alt="photo" />
+    <img className="image" src={nextPhoto} alt="photo" />
   ) : (
     <img className="notImage" src={notImage} alt="sem imagem" />
   );
@@ -17,15 +22,14 @@ export const PhotoUpload = ({ fields, setFields, randomPhoto }) => {
       <div onClick={() => setFields({ ...fields, photo: true })} className="photo-upload">
         {whatImage}
       </div>
-      {fields.photo && (
-        <img onClick={() => setFields({ ...fields, photo: false })} className="trash" src={trash} alt="trash" />
-      )}
+      {fields.photo && <img onClick={() => handleCounter()} className="trash" src={trash} alt="trash" />}
     </div>
   );
 };
 
 PhotoUpload.propTypes = {
+  setCounter: P.func,
   fields: P.object,
   setFields: P.func,
-  randomPhoto: P.string,
+  nextPhoto: P.string,
 };

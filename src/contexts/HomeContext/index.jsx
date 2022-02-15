@@ -7,7 +7,6 @@ export const Context = createContext();
 
 //eslint-disable-next-line
 export const reducer = (state, action) => {
-  console.log(action.type[1]);
   switch (action.type[0]) {
     case 'add': {
       return [{ id: state.length + 1, photo: action.type[1], name: action.type[2], message: action.type[3] }, ...state];

@@ -14,13 +14,13 @@
   cursor: not-allowed;
 }
 
-.btn-publish:hover{
-  border: 2px solid #716f6f ;
-}
-
-.btn-active{
+.btn-publish:enabled{
   background-color: #71bb00;
   color: #fff;
+}
+
+.btn-publish:hover{
+  border: 2px solid #716f6f ;
 }
 
 .btn-active:hover{

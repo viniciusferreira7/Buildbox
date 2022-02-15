@@ -13,7 +13,7 @@ form{
   transform: translateX(-50%);
 }
 
-.group-buttons{
+.btn-group{
   width: 100%;
   max-width: 468px;
   text-align: right;
