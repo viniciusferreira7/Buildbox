@@ -9,7 +9,7 @@
 Também é possível apagar um post
 
 ### `Atenção`
-Só e possível adicionar um post que tenha image nome e mensagem
+Só e possível adicionar um post que tenha image, nome e mensagem
 
 ## Desktop
 
