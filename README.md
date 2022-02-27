@@ -18,7 +18,7 @@ Só e possível adicionar um post que tenha image, nome e mensagem
 
 ## Mobile
 
-<img src="./src/images/buildboxMobile.gif" alt="Gif do design mobile" width="400"/>
+<img src="./src/images/buildboxMobile.gif" alt="Gif do design mobile" width="200"/>
 
 ## Tecnologias
 ### `HTML5`
